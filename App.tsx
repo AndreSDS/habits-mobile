@@ -1,5 +1,5 @@
-import "./src/lib/dayjs";
 import { StyleSheet, View, StatusBar } from "react-native";
+import "./src/lib/dayjs";
 import {
   useFonts,
   Inter_400Regular,
@@ -7,7 +7,13 @@ import {
   Inter_600SemiBold,
   Inter_800ExtraBold,
 } from "@expo-google-fonts/inter";
+
 import { Loading } from "./src/components";
+import { Routes } from "./src/routes";
+import { NewHabit } from "./src/screens/NewHabit";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { Habit } from "./src/screens/Habit";
 import { Home } from "./src/screens/Home";
 
 export default function App() {
@@ -30,7 +36,9 @@ export default function App() {
         translucent
       />
 
-      <Home />
+      <NavigationContainer>
+        <NewHabit />
+      </NavigationContainer>
     </View>
   );
 }
