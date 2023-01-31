@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { View, Text, ScrollView } from "react-native";
 import { generateDaysFromYearBegining } from "../../utils/generate-range-between-days";
 import { DAY_SIZE, HabitDay } from "../HabitDay/HabitDay";
@@ -7,6 +8,8 @@ const minimunSummaryDaysSize = 18 * 5;
 const amountOfDaysToFill = minimunSummaryDaysSize - daysFromYearStart.length;
 
 export const DaysGrid = () => {
+  const { navigate } = useNavigation();
+
   return (
     <ScrollView
       showsVerticalScrollIndicator={false}
@@ -16,7 +19,14 @@ export const DaysGrid = () => {
     >
       <View className="flex-row flex-wrap">
         {daysFromYearStart.map((day) => (
-          <HabitDay key={day.toISOString()} />
+          <HabitDay
+            onPress={() =>
+              navigate("habit", {
+                date: day.toISOString(),
+              })
+            }
+            key={day.toISOString()}
+          />
         ))}
 
         {amountOfDaysToFill > 0

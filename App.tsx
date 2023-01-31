@@ -15,6 +15,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Habit } from "./src/screens/Habit";
 import { Home } from "./src/screens/Home";
+import { AppRoutes } from "./src/routes/app.routes";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -36,9 +37,7 @@ export default function App() {
         translucent
       />
 
-      <NavigationContainer>
-        <NewHabit />
-      </NavigationContainer>
+      <Routes />
     </View>
   );
 }

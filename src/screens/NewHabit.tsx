@@ -38,7 +38,7 @@ export const NewHabit = () => {
     <View className="w-full flex-1 bg-background px-8 pt-16">
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerStyle={{ paddingBottom: 100 }}
+        contentContainerStyle={{ paddingBottom: 50 }}
       >
         <Backbutton />
 
@@ -53,7 +53,7 @@ export const NewHabit = () => {
         <TextInput
           placeholderTextColor={colors.zinc[400]}
           placeholder="Exercícios, domrir bem, etc..."
-          className="h-12 pl-4 mt-3 rounded-lg bg-zinc-800 text-white focus:border-2 focus:border-green-600"
+          className="h-12 pl-4 mt-3 rounded-lg bg-zinc-900 text-white border-2 border-zinc-800 focus:border-green-600"
         />
 
         <Text className="font-semibold mt-4 mb-3 text-white text-base">

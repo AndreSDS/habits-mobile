@@ -12,13 +12,11 @@ export function AppRoutes() {
         headerShown: false,
       }}
     >
-      <>
-        <Screen name="home" component={Home} />
+      <Screen name="home" component={Home} />
 
-        <Screen name="habit" component={Habit} />
+      <Screen name="habit" component={Habit} />
 
-        <Screen name="newhabit" component={NewHabit} />
-      </>
+      <Screen name="newhabit" component={NewHabit} />
     </Navigator>
   );
 }
